@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💊 Choix du Destin 💊</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+        body {
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+            background-color: #000;
+            color: #00ff00;
+            padding: 50px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+        }
+        h1 {
+            color: #00ff00;
+        }
+        p {
+            font-size: 18px;
+        }
+        .choices {
+            margin-top: 20px;
+        }
+        .btn {
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .red-pill {
+            background: red;
+            color: white;
+            box-shadow: 0 0 15px red;
+        }
+        .red-pill:hover {
+            box-shadow: 0 0 25px red;
+        }
+        .blue-pill {
+            background: blue;
+            color: white;
+            box-shadow: 0 0 15px blue;
+        }
+        .blue-pill:hover {
+            box-shadow: 0 0 25px blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>💊 Le Choix du Destin 💊</h1>
+        <p>Un monde d'illusions ou la vérité cachée ? À toi de choisir</p>
+        
+        <div class="choices">
+            <button class="btn red-pill" onclick="choisir('red')">Chimay Rouge</button>
+            <button class="btn blue-pill" onclick="choisir('blue')">Chimay Bleue</button>
+        </div>
+        
+        <div id="message" class="hidden" style="margin-top:20px; font-size: 20px;"></div>
+    </div>
+    
+    <script>
+        function choisir(pill) {
+            let messageDiv = document.getElementById("message");
+            if (pill === "red") {
+                messageDiv.innerHTML = "<p>Bienvenue dans la réalité... Suis le chemin :</p> <a href='https://ton-obsidian-publish.com' target='_blank' style='color: red; font-weight: bold;'>Accéder à la vérité</a>";
+            } else {
+                messageDiv.innerHTML = "<p>Retour à l'illusion... Bonne nuit.</p>";
+            }
+            messageDiv.classList.remove("hidden");
+        }
+    </script>
+</body>
+</html>
