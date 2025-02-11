@@ -27,6 +27,19 @@
         p {
             font-size: 18px;
         }
+        .image-container {
+            margin: 20px 0;
+        }
+        .image-container img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.8);
+        }
+        .legend {
+            font-style: italic;
+            margin-top: 10px;
+            color: #cccccc;
+        }
         .choices {
             margin-top: 20px;
         }
@@ -60,7 +73,16 @@
 <body>
     <div class="container">
         <h1>💊 Le Choix du Destin 💊</h1>
-        <p>Un monde d'illusions ou la vérité cachée ? À toi de choisir</p>
+        <p>Tu as devant toi deux options... Quelle vérité veux-tu découvrir ?</p>
+        
+        <div class="image-container">
+            <img src="https://source.unsplash.com/600x300/?cyberpunk,matrix" alt="Choix du destin">
+            <p class="legend">Un monde d'illusions ou la vérité cachée ? À toi de choisir.</p>
+        </div>
+        
+        <div class="image-container">
+            <img src="Bubu.webp" alt="Bubu">
+        </div>
         
         <div class="choices">
             <button class="btn red-pill" onclick="choisir('red')">Chimay Rouge</button>
